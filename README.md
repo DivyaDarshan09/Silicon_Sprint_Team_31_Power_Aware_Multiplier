@@ -235,14 +235,13 @@ However, it provides **significantly higher throughput**.
 ---
 ### Delay Report (Radix-4 + Dadda)
 
-![rtl](images/Dadda_delay.png)
+![rtl](images/Dadda_Delay.png)
 
 
 ---
 ### Power Report (Radix-4 + Dadda)
 
-![rtl](images/power_Dadda.png)
-
+![rtl](images/Power_Dadda.png)
 
 ## Performance Evaluation
 
