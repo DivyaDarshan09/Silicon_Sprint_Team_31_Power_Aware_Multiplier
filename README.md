@@ -226,6 +226,24 @@ PDP = Power * times Delay
 However, it provides **significantly higher throughput**.
 
 ---
+## Reports
+### Area Report (Radix-4 + Dadda)
+
+![rtl](images/area_dadda.png)
+
+
+---
+### Delay Report (Radix-4 + Dadda)
+
+![rtl](images/Dadda_delay.png)
+
+
+---
+### Power Report (Radix-4 + Dadda)
+
+![rtl](images/power_Dadda.png)
+
+
 ## Performance Evaluation
 
 | Architecture                | Area (µm²) | Delay (ps)     | Power (mW) | PDP (pJ) |
@@ -234,6 +252,9 @@ However, it provides **significantly higher throughput**.
 | NP Booth + Wallace          |  6150.569  |    3346        |   0.379    |  1.265   |
 | Booth + Dadda               |  5104.534  |    3959        |   0.2705   |  1.07    |
 | Pipelined Booth + Wallace   | 11403.455  |  3000 (T_clk)  |   3.6      |  10.8    |
+
+---
+
 
 **Screenshot: Comparision Table**
 
