@@ -1,3 +1,70 @@
+/****************************************************************************************
+* Project        : Silicon Sprint Hackathon 2026
+* Problem        : Power-Aware Multiplier Design
+*
+* Event          : Silicon Sprint Hackathon
+* Organized by   : Mindgrove Technologies
+* In collaboration with : SRM Institute of Science and Technology
+* Date           : March 10–11, 2026
+*
+* Team           : Silicon Sprint - Team 31
+*
+* Module Name    : R4_Wallace_pipeline
+*
+* Description :
+* This module implements a pipelined 16-bit signed multiplier using
+* Radix-4 Booth encoding and Wallace Tree reduction.
+*
+* The goal of this design is to achieve a lower Power-Delay Product (PDP)
+* by reducing the number of partial products and performing parallel
+* compression using Wallace tree stages.
+*
+* Architecture :
+*
+*        X , Y
+*          │
+*          ▼
+*   Stage 1 : Radix-4 Booth Encoding
+*             + Partial Product Generation
+*
+*          ▼
+*   Stage 2 : Wallace Tree Reduction
+*             (Stage1 + Stage2 compression)
+*
+*          ▼
+*   Stage 3 : Final Wallace Reduction
+*             + Carry Lookahead Adder
+*
+*          ▼
+*           P (32-bit Product)
+*
+* Pipeline Structure :
+*
+*   ┌───────────┐
+*   │ Stage 1   │ Booth + PP Generation
+*   └─────┬─────┘
+*         │ pipeline register
+*   ┌─────▼─────┐
+*   │ Stage 2   │ Wallace Tree Compression
+*   └─────┬─────┘
+*         │ pipeline register
+*   ┌─────▼─────┐
+*   │ Stage 3   │ Final Wallace + CLA Adder
+*   └─────┬─────┘
+*         │ pipeline register
+*         ▼
+*       Product
+*
+* Key Features :
+* - Radix-4 Booth reduces partial products from 16 → 8
+* - Wallace tree performs fast parallel compression
+* - Pipelining improves clock frequency
+* - Designed for low Power-Delay Product (PDP)
+*
+* Language       : SystemVerilog
+* Target Tech    : 90 nm Standard Cell Library
+****************************************************************************************/
+
 `timescale 1ns/1ps
 module R4_Wallace_pipeline #(
     parameter N = 16

@@ -60,3 +60,11 @@ Product
 * Edge cases
 * Signed multiplication
 * Randomized testing
+
+## Simulation results
+
+**RTL Simulation:**
+
+![rtl](images/rtl_r4.png)
+
+**Area Report**

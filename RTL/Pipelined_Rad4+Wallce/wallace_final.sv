@@ -1,3 +1,6 @@
+
+
+
 module wallace_final(
     input logic [31:0] sum,
     input logic [31:0] carry,
