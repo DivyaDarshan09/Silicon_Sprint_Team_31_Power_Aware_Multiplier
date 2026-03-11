@@ -1,5 +1,5 @@
 # Silicon Sprint Hackathon 2026
-## Power-Aware 16-bit Multiplier Architectures
+## Power-Aware 16-bit Multiplier 
 
 <br>
 
