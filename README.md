@@ -173,8 +173,8 @@ The following metrics were used to evaluate each architecture:
 
 **PDP definition:**
 
-```
-PDP = Power \times Delay
+```bash
+PDP = Power * times Delay
 ```
 ---
 ## 📈 Key Observations
@@ -214,11 +214,12 @@ However, it provides **significantly higher throughput**.
 ---
 ## Performance Evaluation
 
-| Architecture                | Area (µm²) | Delay (ps) | Power (mW) | PDP (pJ) |
-| --------------------------- | ---------- | ---------- | ---------- | ---      |
-| Radix-4 Booth               |  5280.891  |    3862    |   0.274    |  1.05    |
-| NP Booth + Wallace          |  6150.569  |    3346    |   0.4485   |  1.48    |
-| Pipelined Booth + Wallace   | 11403.455  |    3000    |   3.6      |  10.8    |
+| Architecture                | Area (µm²) | Delay (ps)     | Power (mW) | PDP (pJ) |
+| --------------------------- | ---------- | -------------- | ---------- | ---      |
+| Radix-4 Booth               |  5280.891  |    3862        |   0.274    |  1.05    |
+| NP Booth + Wallace          |  6150.569  |    3346        |   0.379    |  1.265   |
+| Booth + Dadda               |  5104.534  |    3959        |   0.2705   |  1.07    |
+| Pipelined Booth + Wallace   | 11403.455  |  3000 (T_clk)  |   3.6      |  10.8    |
 
 ---
 ## 🏆 Final Design Conclusion
@@ -275,16 +276,16 @@ However, it provides **significantly higher throughput**.
 This project was developed as part of the **Silicon Sprint Hackathon 2026**.
 
 **Divya Darshan V R**
-Roll No: 2023105032
-B.E. Electronics and Communication Engineering (3rd Year)
-College of Engineering, Guindy
-Anna University, Chennai-25.
+- Roll No: 2023105032
+- B.E. Electronics and Communication Engineering (3rd Year)
+- College of Engineering, Guindy
+- Anna University, Chennai-25.
 
 **Goutham Badhrinath V**
-Roll No: 2023105036 
-B.E. Electronics and Communication Engineering (3rd Year)
-College of Engineering, Guindy
-Anna University, Chennai-25.
+- Roll No: 2023105036 
+- B.E. Electronics and Communication Engineering (3rd Year)
+- College of Engineering, Guindy
+-Anna University, Chennai-25.
 
 ---
 
