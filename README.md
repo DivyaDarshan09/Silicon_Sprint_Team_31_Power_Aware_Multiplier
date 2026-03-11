@@ -221,6 +221,22 @@ However, it provides **significantly higher throughput**.
 | Booth + Dadda               |  5104.534  |    3959        |   0.2705   |  1.07    |
 | Pipelined Booth + Wallace   | 11403.455  |  3000 (T_clk)  |   3.6      |  10.8    |
 
+**Screenshot: Comparision Table**
+
+![rtl](images/pdp_table.png)
+
+---
+### Power Comparision Chart
+
+**Overall PDP Comparision bar plot**
+
+![rtl](images/pdp2.png)
+
+
+**PDP Comparision of Non Pipelined Architecture**
+
+![rtl](images/pdp3.jpeg)
+
 ---
 ## 🏆 Final Design Conclusion
 
