@@ -1,6 +1,20 @@
 # Silicon Sprint Hackathon 2026
 ## Power-Aware 16-bit Multiplier Architectures
 
+<br>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Event-Silicon%20Sprint%202026-success"/>
+  <img src="https://img.shields.io/badge/Organized%20by-Mindgrove%20Technologies-blue"/>
+  <img src="https://img.shields.io/badge/Collaboration-SRMIST-orange"/>
+  <img src="https://img.shields.io/badge/Focus-Power%20Aware%20Multiplier-purple"/>
+  <img src="https://img.shields.io/badge/Tech-RTL%20Design%20%7C%20Synthesis-critical"/>
+</p>
+
+<p align="center">
+<strong>⚡ In modern silicon, true efficiency is not measured by speed alone, but by how intelligently power and delay are balanced.</strong>
+</p>
+
 - **Team:** Silicon Sprint – Team 31
 - **Event:** Silicon Sprint Hackathon
 - **Organized by:** Mindgrove Technologies
@@ -104,9 +118,9 @@ Radix-4 Booth Encoder
   ↓
 Partial Product Generator
   ↓
-Wallace Tree Reduction
+Wallace Tree Reduction (8->6->4->3->2)
   ↓
-Final Adder
+Final CLA Adder
   ↓
 Product
 ```
@@ -223,7 +237,7 @@ However, it provides **significantly higher throughput**.
 
 **Screenshot: Comparision Table**
 
-![rtl](images/pdp_table.png)
+![rtl](images/pdp_table.jpeg)
 
 ---
 ### Power Comparision Chart
