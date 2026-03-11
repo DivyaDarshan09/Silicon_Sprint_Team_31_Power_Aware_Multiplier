@@ -315,7 +315,7 @@ This project was developed as part of the **Silicon Sprint Hackathon 2026**.
 - Roll No: 2023105036 
 - B.E. Electronics and Communication Engineering (3rd Year)
 - College of Engineering, Guindy
--Anna University, Chennai-25.
+- Anna University, Chennai-25.
 
 ---
 
