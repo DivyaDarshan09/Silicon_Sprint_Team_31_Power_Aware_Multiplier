@@ -1,12 +1,11 @@
 # Silicon Sprint Hackathon 2026
 ## Power-Aware 16-bit Multiplier Architectures
 
-**Team:** Silicon Sprint – Team 31
-
-**Event:** Silicon Sprint Hackathon
-**Organized by:** Mindgrove Technologies
-**In collaboration with:** SRM Institute of Science and Technology
-**Date:** March 10–11, 2026
+- **Team:** Silicon Sprint – Team 31
+- **Event:** Silicon Sprint Hackathon
+- **Organized by:** Mindgrove Technologies
+- **In collaboration with:** SRM Institute of Science and Technology
+- **Date:** March 10–11, 2026
 
 ---
 ## 🎯 Overview
