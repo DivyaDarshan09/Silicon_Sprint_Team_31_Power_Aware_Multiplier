@@ -160,7 +160,7 @@ Trade-off:
 
 ---
 
-# 📊 Evaluation Metrics
+## 📊 Evaluation Metrics
 
 The following metrics were used to evaluate each architecture:
 
@@ -177,7 +177,7 @@ The following metrics were used to evaluate each architecture:
 PDP = Power \times Delay
 ```
 ---
-# 📈 Key Observations
+## 📈 Key Observations
 
 ### Radix-4 Booth
 
@@ -221,31 +221,75 @@ However, it provides **significantly higher throughput**.
 | Pipelined Booth + Wallace   | 11403.455  |    3000    |   3.6      |  10.8    |
 
 ---
-# 🏆 Final Solution
+## 🏆 Final Design Conclusion
 
 - The primary objective of this project was to design a **16-bit multiplier architecture with the lowest possible Power-Delay Product (PDP)**.
-- After implementing and synthesizing multiple multiplier architectures, the following observations were made:
 
-- * **Radix-4 Booth + Wallace Tree** and **Radix-4 Booth + Dadda Tree** achieved very similar performance in terms of delay.
-- * However, **Radix-4 Booth + Dadda Tree required fewer compressor units**, resulting in **lower switching activity and reduced dynamic power consumption**.
-- * Because of this reduction in power while maintaining comparable delay, the **Radix-4 Booth + Dadda architecture produced the lowest PDP among all evaluated designs**.
+- Multiple multiplier architectures were implemented and evaluated, including Radix-4 Booth, Wallace Tree, Dadda Tree, and pipelined versions of these designs. Each architecture was synthesized and analyzed to compare power consumption, critical path delay, and overall PDP.
 
-- Although the **pipelined Radix-4 Booth + Wallace multiplier** achieved significantly higher clock frequency due to the division of the critical path into multiple stages, the introduction of pipeline registers increased switching activity and power consumption. As a result, the pipelined design showed a **higher overall PDP compared to the non-pipelined architectures**.
-- Therefore, considering the project goal of minimizing **Power-Delay Product**, the **Radix-4 Booth + Dadda Tree multiplier is selected as the final optimized solution**.
+### Non-Pipelined Architectures
 
-### Final Selected Architecture
-```
-Radix-4 Booth Encoding
-↓
-Partial Product Generation
-↓
-Dadda Tree Compression
-↓
-Final Carry Propagate Adder
-↓
-Product Output
-```
+- Among the non-pipelined designs, both **Radix-4 Booth + Wallace Tree** and **Radix-4 Booth + Dadda Tree** produced very similar delay characteristics. However, the **Dadda Tree reduction requires fewer compressor units compared to Wallace Tree**, which reduces switching activity and dynamic power.
 
-This architecture achieves the **best balance between power efficiency and computational delay**, making it the most suitable design for the **Power-Aware Multiplier problem in Silicon Sprint 2026**.
+- As a result, the **Radix-4 Booth + Dadda Tree multiplier achieved the lowest PDP among all non-pipelined architectures**, making it the most power-efficient solution.
+
+---
+
+### Pipelined Architectures
+
+- To explore higher-performance implementations, a **pipelined Radix-4 Booth + Wallace Tree multiplier** was developed.
+
+- The pipeline divides the critical path into **three stages**:
+
+1. Booth Encoding + Partial Product Generation
+2. Wallace Tree Reduction
+3. Final Wallace Reduction + Carry Lookahead Adder
+
+- By splitting the critical path, the **clock period is determined by the slowest pipeline stage rather than the entire multiplier path**, allowing the design to operate at a significantly **higher clock frequency**.
+
+- However, introducing pipeline registers increases switching activity and clock power. Due to this overhead, the pipelined implementation resulted in a **Power-Delay Product approximately 10× higher than the non-pipelined architecture**.
+
+- Despite this increase in PDP, the pipelined design provides **much higher throughput**, making it suitable for high-performance systems.
+
+- Among the pipelined designs explored, the **Radix-4 Booth + Wallace Tree pipeline achieved the best PDP within the pipelined category**.
+
+---
+
+# 📊 Final Architectural Insights
+
+| Architecture                      | Key Advantage                            |
+| --------------------------------- | ---------------------------------------- |
+| Radix-4 Booth + Dadda Tree        | Lowest PDP (Best power-efficient design) |
+| Radix-4 Booth + Wallace Tree      | Similar delay but slightly higher power  |
+| Pipelined Radix-4 Booth + Wallace | Highest throughput                       |
+| Pipelined Radix-4 Booth + Wallace | Best PDP among pipelined designs         |
+
+
+- Considering the goal of **minimizing Power-Delay Product**, the **Radix-4 Booth + Dadda Tree multiplier is selected as the final optimized architecture**.
+
+- The **pipelined Radix-4 Booth + Wallace multiplier** is recommended for applications requiring **high throughput and higher clock frequency**, although it comes with increased PDP due to pipeline overhead.
+
+---
+# 👨‍💻 Authors
+
+This project was developed as part of the **Silicon Sprint Hackathon 2026**.
+
+**Divya Darshan V R**
+Roll No: 2023105032
+B.E. Electronics and Communication Engineering (3rd Year)
+College of Engineering, Guindy
+Anna University, Chennai-25.
+
+**Goutham Badhrinath V**
+Roll No: 2023105036 
+B.E. Electronics and Communication Engineering (3rd Year)
+College of Engineering, Guindy
+Anna University, Chennai-25.
+
+---
+
+# 🙏 Acknowledgements
+
+We would like to thank **Mindgrove Technologies** and **SRM Institute of Science and Technology** for organizing the **Silicon Sprint Hackathon 2026**, which provided an excellent platform to explore **power-aware digital hardware design** and multiplier architecture optimization.
 
 ---
